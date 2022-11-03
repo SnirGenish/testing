@@ -1,20 +1,20 @@
 import { LogInPage } from "./pages/LogIn/LogInPage";
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
+import { theme } from "./assets/themes/theme.js";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
+import SchoolListPage from "./pages/SchoolList/SchoolListPage";
 
 function App() {
-  const theme = extendTheme({
-    colors: {
-      primary: {
-        100: "#e19b46",
-      },
-      secondary: "#5561e1",
-    },
-  });
   return (
     <div className="App">
-      <ChakraProvider>
-        <LogInPage />
-      </ChakraProvider>
+      <Router>
+        <ChakraProvider theme={theme}>
+          <Routes>
+            <Route path="/" element={<LogInPage />} />
+            <Route path="/schools" element={<SchoolListPage />} />
+          </Routes>
+        </ChakraProvider>
+      </Router>
     </div>
   );
 }

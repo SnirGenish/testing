@@ -44,9 +44,9 @@ export const LogInPage = () => {
     }
   };
   return (
-    <Flex h="100vh" alignItems="center">
+    <Flex h="100vh" alignItems="center" bg={"#fcffff"}>
       <Box
-        w={["0", "60%", "60%"]}
+        w={["0", "0%", "0%", "60%"]}
         h="100%"
         bgImage={loginImg}
         bgPosition="center"
@@ -57,14 +57,19 @@ export const LogInPage = () => {
         <Stack spacing="8">
           <Stack spacing="5">
             <FormControl>
-              <FormLabel htmlFor="username">שם משתמש</FormLabel>
+              <FormLabel color="sec.800" htmlFor="username">
+                שם משתמש
+              </FormLabel>
               <Input
+                bg="white"
                 id="username"
                 type="username"
                 onChange={(event) => setUserName(event.currentTarget.value)}
                 value={userName}
               />
-              <FormLabel htmlFor="password">סיסמה</FormLabel>
+              <FormLabel color="sec.800" htmlFor="password">
+                סיסמה
+              </FormLabel>
               <InputGroup>
                 <InputLeftElement>
                   <IconButton
@@ -75,6 +80,7 @@ export const LogInPage = () => {
                   />
                 </InputLeftElement>
                 <Input
+                  bg="white"
                   id="password"
                   ref={mergeRef}
                   name="password"
@@ -94,7 +100,7 @@ export const LogInPage = () => {
               התחבר
             </Button>
             <Button onClick={() => misradHandler()} variant="outline" size="lg">
-              <Image h="90%" src={owlimg} />
+              <Image h="80%" src={owlimg} />
               הזדהות אחידה משרד החינוך
             </Button>
           </Stack>

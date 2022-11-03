@@ -1,0 +1,75 @@
+import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
+export const theme = extendTheme(
+  {
+    colors: {
+      prim: {
+        50: "#FBF3E9",
+        100: "#F5DEC2",
+        200: "#EFC89A",
+        300: "#E8B373",
+        400: "#E29E4B",
+        500: "#DB8824",
+        600: "#B06D1C",
+        700: "#845215",
+        800: "#58370E",
+        900: "#2C1B07",
+      },
+      sec: {
+        50: "#E9EBFB",
+        100: "#C2C7F4",
+        200: "#9BA2ED",
+        300: "#747EE7",
+        400: "#4D5AE0",
+        500: "#2636D9",
+        600: "#1F2BAD",
+        700: "#172082",
+        800: "#0F1557",
+        900: "#080B2B",
+      },
+      sec2: {
+        50: "#EDEDF8",
+        100: "#CBCEEB",
+        200: "#AAAEDF",
+        300: "#898FD2",
+        400: "#686FC5",
+        500: "#4750B8",
+        600: "#384094",
+        700: "#2A306F",
+        800: "#1C204A",
+        900: "#0E1025",
+      },
+      prim0: {
+        50: "#FFF7F5",
+        100: "#FFE8B8",
+        200: "#FFDA8A",
+        300: "#FFCB5C",
+        400: "#FFBC2E",
+        500: "#FFAE00",
+        600: "#CC8B00",
+        700: "#996800",
+        800: "#664600",
+        900: "#332300",
+      },
+      prim2: {
+        50: "#F9F5EC",
+        100: "#EEE2C9",
+        200: "#E3CFA6",
+        300: "#D8BC83",
+        400: "#CDAA60",
+        500: "#C2973D",
+        600: "#9B7931",
+        700: "#755B24",
+        800: "#4E3C18",
+        900: "#271E0C",
+      },
+      components: {
+        FormLabel: {
+          defaultScheme: "blue",
+        },
+      },
+    },
+  },
+  withDefaultColorScheme({
+    colorScheme: "prim",
+  })
+);
